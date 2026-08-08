@@ -44,13 +44,13 @@ const Scene4_Activities: React.FC = () => {
             position: "absolute", top: "8%", width: "100%", textAlign: "center",
             opacity: secOpacity,
           }}>
-            <span style={{ fontFamily: "'Noto Sans SC', sans-serif", fontSize: 18, fontWeight: 700, color: sec.color, letterSpacing: 2 }}>
+            <span style={{ fontFamily: "Noto Sans SC", fontSize: 18, fontWeight: 700, color: sec.color, letterSpacing: 2 }}>
               {sec.title}
             </span>
             <div style={{ marginTop: 12, display: "flex", justifyContent: "center", gap: 10, flexWrap: "wrap" }}>
               {sec.items.map((item, ii) => (
                 <span key={ii} style={{
-                  fontFamily: "'Noto Sans SC', sans-serif", fontSize: 24, fontWeight: 700,
+                  fontFamily: "Noto Sans SC", fontSize: 24, fontWeight: 700,
                   color: "#FFFFFF", backgroundColor: theme.mood.card,
                   padding: "8px 16px", borderRadius: 10, border: `1px solid ${sec.color}40`,
                 }}>{item}</span>
