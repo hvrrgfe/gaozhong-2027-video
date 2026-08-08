@@ -21,7 +21,7 @@ const Scene2_AboutMe: React.FC = () => {
 
       <div style={{ position: "absolute", top: "6%", width: "100%", textAlign: "center" }}>
         <span style={{
-          fontFamily: "'Noto Sans SC', sans-serif", fontSize: 36, fontWeight: 900,
+          fontFamily: "Noto Sans SC", fontSize: 36, fontWeight: 900,
           color: theme.tech.purple, textShadow: `0 0 40px ${theme.tech.purple}60`,
         }}>我是谁？</span>
       </div>
@@ -42,8 +42,8 @@ const Scene2_AboutMe: React.FC = () => {
               display: "flex", flexDirection: "column", justifyContent: "center",
             }}>
               <div style={{ fontSize: 36, marginBottom: 6 }}>{card.icon}</div>
-              <div style={{ fontFamily: "'Noto Sans SC', sans-serif", fontSize: 22, fontWeight: 800, color: "#FFFFFF", marginBottom: 4 }}>{card.title}</div>
-              <div style={{ fontFamily: "'Noto Sans SC', sans-serif", fontSize: 13, color: "#B0B0C0" }}>{card.desc}</div>
+              <div style={{ fontFamily: "Noto Sans SC", fontSize: 22, fontWeight: 800, color: "#FFFFFF", marginBottom: 4 }}>{card.title}</div>
+              <div style={{ fontFamily: "Noto Sans SC", fontSize: 13, color: "#B0B0C0" }}>{card.desc}</div>
             </div>
           );
         })}
@@ -54,7 +54,7 @@ const Scene2_AboutMe: React.FC = () => {
         position: "absolute", bottom: "4%", width: "100%", textAlign: "center",
         opacity: interpolate(frame, [120, 130], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
       }}>
-        <span style={{ fontFamily: "'Noto Sans SC', sans-serif", fontSize: 16, color: "#8899AA" }}>
+        <span style={{ fontFamily: "Noto Sans SC", fontSize: 16, color: "#8899AA" }}>
           B站粉丝38个，但我还在努力！QwQ
         </span>
       </div>
