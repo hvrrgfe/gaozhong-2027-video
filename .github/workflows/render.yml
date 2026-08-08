@@ -29,9 +29,9 @@ jobs:
           npm install --legacy-peer-deps --no-audit --no-fund
           npx remotion versions
 
-      - name: Install Chromium
+      - name: Install Chromium and CJK fonts
         run: |
-          apt-get update && apt-get install -y chromium-browser 2>/dev/null || \
+          apt-get update && apt-get install -y chromium-browser fonts-noto-cjk 2>/dev/null || \
           (npx playwright install chromium 2>/dev/null) || \
           (npx puppeteer browsers install chrome 2>/dev/null) || \
           echo "::warning::Chromium install failed, trying fallback"
