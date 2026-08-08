@@ -217,7 +217,7 @@ const Scene4_Group: React.FC = () => {
           }}>⚡ 每周竞技场（周末晚）</span>
           <div style={{ display: "flex", gap: 10 }}>
             <MiniCard icon="🏆" title="谁是卷王" desc="限时刷题赛·20分钟5道压轴题" color={theme.bocchi.orange} />
-            <MiniCard icon="🩺" title="错题ICU" desc="投票选群题·学霸语音拆解" color={theme.railgun.electric} />
+            <MiniCard icon="🩺" title="错题ICU" desc="问卷星收集难题·投票选群题" color={theme.railgun.electric} />
           </div>
         </div>
 
@@ -229,7 +229,7 @@ const Scene4_Group: React.FC = () => {
             letterSpacing: 2, marginLeft: 4
           }}>💬 每月深度破冰</span>
           <div style={{ display: "flex", gap: 10 }}>
-            <MiniCard icon="🌳" title="树洞吐槽" desc="匿名模式·月考考崩了怎么办" color={theme.tech.purple} />
+            <MiniCard icon="🌳" title="树洞吐槽" desc="问卷星匿名·月考考崩了怎么办" color={theme.tech.purple} />
             <MiniCard icon="📔" title="共享笔记库" desc="腾讯文档·认领章节·共创入库" color={theme.bocchi.yellow} />
           </div>
         </div>
