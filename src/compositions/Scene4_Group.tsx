@@ -242,8 +242,8 @@ const Scene4_Group: React.FC = () => {
             letterSpacing: 2, marginLeft: 4
           }}>🏆 积分榜奖励（每月前5名）</span>
           <div style={{ display: "flex", gap: 10 }}>
-            <MiniCard icon="🏅" title="专属群头衔" desc="清北种子·卷王本王·自定义" color="#FFD700" />
-            <MiniCard icon="💡" title="答疑特权" desc="积分榜首可获1对1辅导30分钟" color="#43A047" />
+            <MiniCard icon="🏅" title="群头衔定制" desc="清北种子·卷王本王·自定义" color="#FFD700" />
+            <MiniCard icon="📊" title="积分透明" desc="腾讯文档核对·每月公示" color="#43A047" />
           </div>
         </div>
       </div>
