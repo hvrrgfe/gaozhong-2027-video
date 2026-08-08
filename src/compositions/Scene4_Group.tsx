@@ -229,7 +229,7 @@ const Scene4_Group: React.FC = () => {
             letterSpacing: 2, marginLeft: 4
           }}>💬 每月深度破冰</span>
           <div style={{ display: "flex", gap: 10 }}>
-            <MiniCard icon="🌳" title="树洞吐槽" desc="问卷星匿名·月考考崩了怎么办" color={theme.tech.purple} />
+            <MiniCard icon="🌳" title="树洞吐槽" desc="公开聊天·月考考崩了怎么办" color={theme.tech.purple} />
             <MiniCard icon="📔" title="共享笔记库" desc="腾讯文档·认领章节·共创入库" color={theme.bocchi.yellow} />
           </div>
         </div>
