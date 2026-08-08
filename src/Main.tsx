@@ -12,16 +12,16 @@ export const Main: React.FC = () => {
     <AbsoluteFill style={{ backgroundColor: theme.mood.bg }}>
       <Audio src={staticFile("music_warm_acoustic.mp3")} volume={0.8} />
 
-      <Sequence from={0 * FPS} durationInFrames={14 * FPS}>
+      <Sequence from={0 * FPS} durationInFrames={16 * FPS}>
         <Scene1_Intro />
       </Sequence>
-      <Sequence from={14 * FPS} durationInFrames={10 * FPS}>
+      <Sequence from={16 * FPS} durationInFrames={10 * FPS}>
         <Scene3_Group />
       </Sequence>
-      <Sequence from={24 * FPS} durationInFrames={18 * FPS}>
+      <Sequence from={26 * FPS} durationInFrames={14 * FPS}>
         <Scene4_Activities />
       </Sequence>
-      <Sequence from={42 * FPS} durationInFrames={8 * FPS}>
+      <Sequence from={40 * FPS} durationInFrames={10 * FPS}>
         <Scene5_Rankings />
       </Sequence>
       <Sequence from={50 * FPS} durationInFrames={15 * FPS}>
