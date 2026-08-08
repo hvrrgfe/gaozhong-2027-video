@@ -21,19 +21,39 @@ const Scene4_Group: React.FC = () => {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
 
-  // 3个特点
-  const feature1 = interpolate(frame, [120, 140], [0, 1], {
+  // 3个特点（先淡入，后淡出让位给活动区）
+  const feature1 = interpolate(frame, [120, 140, 440, 460], [0, 1, 1, 0], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
-  const feature2 = interpolate(frame, [200, 220], [0, 1], {
+  const feature2 = interpolate(frame, [200, 220, 440, 460], [0, 1, 1, 0], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
-  const feature3 = interpolate(frame, [280, 300], [0, 1], {
+  const feature3 = interpolate(frame, [280, 300, 440, 460], [0, 1, 1, 0], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp",
+  });
+
+  // 活动展示
+  const activitiesTitle = interpolate(frame, [500, 530], [0, 1], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp",
+  });
+  // 活动组展示（3组）
+  const act1 = interpolate(frame, [530, 560], [0, 1], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp",
+  });
+  const act2 = interpolate(frame, [650, 680], [0, 1], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp",
+  });
+  const act3 = interpolate(frame, [770, 800], [0, 1], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp",
+  });
+
+  // 活动标语
+  const sloganOpacity = interpolate(frame, [950, 980], [0, 1], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
 
   // 热血集结
-  const rallyOpacity = interpolate(frame, [400, 430], [0, 1], {
+  const rallyOpacity = interpolate(frame, [1150, 1180], [0, 1], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
 
@@ -152,6 +172,104 @@ const Scene4_Group: React.FC = () => {
         />
       </div>
 
+      {/* 活动展示标题 */}
+      <div
+        style={{
+          position: "absolute",
+          top: "42%",
+          width: "100%",
+          textAlign: "center",
+          opacity: activitiesTitle,
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "'PingFang SC', sans-serif",
+            fontSize: 32,
+            fontWeight: 800,
+            color: theme.bocchi.yellow,
+            textShadow: `0 0 30px ${theme.bocchi.yellow}50`,
+          }}
+        >
+          群里有什么活动？
+        </span>
+      </div>
+
+      {/* 活动分类标签 */}
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "6%",
+          width: "88%",
+          height: "40%",
+          display: "flex",
+          flexDirection: "column",
+          gap: 10,
+        }}
+      >
+        {/* 每周竞技场 */}
+        <div style={{ opacity: act1, display: "flex", flexDirection: "column", gap: 4 }}>
+          <span style={{
+            fontFamily: "'PingFang SC', sans-serif",
+            fontSize: 14, fontWeight: 700, color: theme.bocchi.orange,
+            letterSpacing: 2, marginLeft: 4
+          }}>⚡ 每周竞技场（周末晚）</span>
+          <div style={{ display: "flex", gap: 10 }}>
+            <MiniCard icon="🏆" title="谁是卷王" desc="限时刷题赛·20分钟5道压轴题" color={theme.bocchi.orange} />
+            <MiniCard icon="🩺" title="错题ICU" desc="投票选群题·学霸语音拆解" color={theme.railgun.electric} />
+          </div>
+        </div>
+
+        {/* 每月深度破冰 */}
+        <div style={{ opacity: act2, display: "flex", flexDirection: "column", gap: 4 }}>
+          <span style={{
+            fontFamily: "'PingFang SC', sans-serif",
+            fontSize: 14, fontWeight: 700, color: theme.tech.purple,
+            letterSpacing: 2, marginLeft: 4
+          }}>💬 每月深度破冰</span>
+          <div style={{ display: "flex", gap: 10 }}>
+            <MiniCard icon="🌳" title="树洞吐槽" desc="匿名模式·月考考崩了怎么办" color={theme.tech.purple} />
+            <MiniCard icon="📔" title="笔记拍卖" desc="上传笔记投票·优质入库共享" color={theme.bocchi.yellow} />
+          </div>
+        </div>
+
+        {/* 积分奖励 */}
+        <div style={{ opacity: act3, display: "flex", flexDirection: "column", gap: 4 }}>
+          <span style={{
+            fontFamily: "'PingFang SC', sans-serif",
+            fontSize: 14, fontWeight: 700, color: "#FFD700",
+            letterSpacing: 2, marginLeft: 4
+          }}>🏆 积分榜奖励（每月前5名）</span>
+          <div style={{ display: "flex", gap: 10 }}>
+            <MiniCard icon="🏅" title="专属群头衔" desc="清北种子·卷王本王·自定义" color="#FFD700" />
+            <MiniCard icon="💡" title="答疑特权" desc="积分榜首可获1对1辅导30分钟" color="#43A047" />
+          </div>
+        </div>
+      </div>
+
+      {/* 活动标语 */}
+      <div
+        style={{
+          position: "absolute",
+          top: "91%",
+          width: "100%",
+          textAlign: "center",
+          opacity: sloganOpacity,
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "'PingFang SC', sans-serif",
+            fontSize: 20,
+            color: "#B0C4DE",
+            fontStyle: "italic",
+          }}
+        >
+          "规则固定·活动定时·来了就不想走 🔥"
+        </span>
+      </div>
+
       {/* 热血集结号 */}
       <div
         style={{
@@ -219,6 +337,52 @@ const FeatureItem: React.FC<{
       >
         {text}
       </span>
+    </div>
+  );
+};
+
+const MiniCard: React.FC<{
+  icon: string;
+  title: string;
+  desc: string;
+  color: string;
+}> = ({ icon, title, desc, color }) => {
+  return (
+    <div
+      style={{
+        flex: 1,
+        backgroundColor: "#1A1A3E",
+        borderRadius: 12,
+        border: `2px solid ${color}40`,
+        padding: "10px 12px",
+        display: "flex",
+        alignItems: "center",
+        gap: 10,
+      }}
+    >
+      <span style={{ fontSize: 26 }}>{icon}</span>
+      <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+        <span
+          style={{
+            fontFamily: "'PingFang SC', sans-serif",
+            fontSize: 16,
+            fontWeight: 700,
+            color: "#FFFFFF",
+          }}
+        >
+          {title}
+        </span>
+        <span
+          style={{
+            fontFamily: "'PingFang SC', sans-serif",
+            fontSize: 11,
+            color: "#8899AA",
+            lineHeight: 1.3,
+          }}
+        >
+          {desc}
+        </span>
+      </div>
     </div>
   );
 };
