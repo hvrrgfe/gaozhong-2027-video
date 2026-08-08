@@ -15,7 +15,7 @@ const Scene5_Rankings: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: theme.mood.bg, overflow: "hidden" }}>
       <div style={{ position: "absolute", top: "5%", width: "100%", textAlign: "center" }}>
-        <span style={{ fontFamily: "'Noto Sans SC', sans-serif", fontSize: 32, fontWeight: 900, color: "#FFD700", textShadow: `0 0 40px #FFD70050` }}>
+        <span style={{ fontFamily: "Noto Sans SC", fontSize: 32, fontWeight: 900, color: "#FFD700", textShadow: `0 0 40px #FFD70050` }}>
           🏆 积分排行榜
         </span>
       </div>
@@ -31,7 +31,7 @@ const Scene5_Rankings: React.FC = () => {
               borderRadius: 10, border: `2px solid ${r.highlight ? r.color : r.color}40`,
             }}>
               <span style={{ fontSize: 20 }}>{["🥇","🥈","🥉","#4","#5"][r.rank-1]}</span>
-              <span style={{ fontFamily: "'Noto Sans SC', sans-serif", fontSize: 18, fontWeight: 700, color: "#FFFFFF", flex: 1 }}>{r.name}</span>
+              <span style={{ fontFamily: "Noto Sans SC", fontSize: 18, fontWeight: 700, color: "#FFFFFF", flex: 1 }}>{r.name}</span>
               <span style={{ fontFamily: "monospace", fontSize: 20, fontWeight: 900, color: r.highlight ? r.color : "#FFD700" }}>{r.score}<span style={{ fontSize: 12, color: "#667788" }}>分</span></span>
             </div>
           );
@@ -39,7 +39,7 @@ const Scene5_Rankings: React.FC = () => {
       </div>
       <div style={{ position: "absolute", bottom: "8%", width: "100%", textAlign: "center",
         opacity: interpolate(frame, [170, 180], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
-        <span style={{ fontFamily: "'Noto Sans SC', sans-serif", fontSize: 18, color: "#B0C4DE" }}>
+        <span style={{ fontFamily: "Noto Sans SC", fontSize: 18, color: "#B0C4DE" }}>
           ↓ 下一个上榜的，就是你 ↓
         </span>
       </div>
