@@ -1,36 +1,43 @@
-// 主题配色 —— 孤独摇滚橙黄 + 超炮电光蓝 + 科技紫
+// 主题配色 —— 暖色调（棕色/橘色/暖黄/奶油）
 export const theme = {
+  // 暖色主色调
+  warm: {
+    brown: "#8D6E63",
+    darkBrown: "#4E342E",
+    cream: "#FFF8E1",
+    tan: "#D7CCC8",
+  },
   // 孤独摇滚/Bocchi 暖色系
   bocchi: {
-    orange: "#FF6B35",
-    yellow: "#FFD700",
-    peach: "#FFE0B2",
-    coral: "#FF8A65",
+    orange: "#FF8A65",
+    yellow: "#FFD54F",
+    peach: "#FFCCBC",
+    coral: "#FFAB91",
   },
-  // 超炮/Railgun 电光蓝系
+  // 超炮/Railgun 电光蓝系（保留少量冷色点缀）
   railgun: {
-    blue: "#4169E1",
-    lightBlue: "#7EC8E3",
+    blue: "#5C6BC0",
+    lightBlue: "#90CAF9",
     white: "#FFFFFF",
-    electric: "#00E5FF",
+    electric: "#4DD0E1",
   },
   // 科技紫
   tech: {
-    purple: "#9B59B6",
-    deepPurple: "#6C3483",
+    purple: "#AB47BC",
+    deepPurple: "#7B1FA2",
   },
-  // 情绪色
+  // 情绪色（暖底）
   mood: {
-    lonely: "#2C3E50", // 孤独-深蓝灰
-    warm: "#FFD180",   // 治愈-暖黄
-    dark: "#1B1B2F",   // 开场黑
-    bg: "#0F1026",     // 背景深色
+    lonely: "#5D4037",  // 孤独-深棕
+    warm: "#FFE0B2",    // 治愈-暖黄
+    dark: "#1A0F0A",    // 开场-深暖棕
+    bg: "#2D1F14",      // 背景-暖棕
+    card: "#3E2723",    // 卡片-深咖啡
   },
 };
 
-// 字体可用 "NotoSansSC" 等
 export const FONT = {
-  family: "system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+  family: "'Noto Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif",
 };
 
 // 场景时间轴（秒）
