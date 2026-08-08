@@ -14,6 +14,8 @@ const Scene1_Intro: React.FC = () => {
   // 标题逐个字弹出
   const title = "高中，到底是什么样的？";
   const titleChars = Math.min(title.length, Math.floor(frame * 3));
+  // 放大缩小动画
+  const pulse = Math.sin(frame * 0.08) * 0.08 + 1;
 
   return (
     <AbsoluteFill style={{ backgroundColor: theme.mood.dark, overflow: "hidden" }}>
@@ -48,8 +50,9 @@ const Scene1_Intro: React.FC = () => {
       <div style={{ position: "absolute", top: "30%", width: "100%", textAlign: "center" }}>
         <span style={{
           fontFamily: "Noto Sans SC", fontSize: 56, fontWeight: 900,
-          color: theme.warm.cream,
-          textShadow: `0 0 40px ${theme.bocchi.orange}80, 0 4px 10px rgba(0,0,0,0.6)`,
+          color: theme.bocchi.yellow,
+          display: "inline-block", transform: `scale(${pulse})`,
+          textShadow: `0 0 40px ${theme.bocchi.yellow}70, 0 4px 10px rgba(0,0,0,0.3)`,
           letterSpacing: 4,
         }}>{title.slice(0, titleChars)}</span>
       </div>
@@ -86,8 +89,8 @@ const Scene1_Intro: React.FC = () => {
         }}>
           <span style={{
             fontFamily: "Noto Sans SC", fontSize: 40, fontWeight: 900,
-            color: theme.bocchi.yellow,
-            textShadow: `0 0 40px ${theme.bocchi.yellow}70, 0 4px 8px rgba(0,0,0,0.5)`,
+            color: theme.bocchi.yellow, display: "inline-block", transform: `scale(${pulse})`,
+            textShadow: `0 0 40px ${theme.bocchi.yellow}70, 0 4px 8px rgba(0,0,0,0.3)`,
           }}>
             它，本就是如此有趣 ✨
           </span>
