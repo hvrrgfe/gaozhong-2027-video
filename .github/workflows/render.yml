@@ -1,0 +1,58 @@
+name: Render Video
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+    inputs:
+      frames:
+        description: 'Number of frames to render (leave empty for full video)'
+        required: false
+        type: string
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npx remotion versions
+
+      - name: Install Chromium for Remotion
+        run: |
+          npx remotion puppeteer-install
+
+      - name: Render video
+        run: |
+          mkdir -p out
+          npx remotion render Main out/video.mp4 \
+            --codec=h264 \
+            --crf=18 \
+            --pixel-format=yuv420p \
+            --pro-res-profile=high
+
+      - name: Upload video artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gaozhong-2027-video
+          path: out/video.mp4
+          retention-days: 7
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/v')
+        with:
+          files: out/video.mp4
+          generate_release_notes: true

@@ -1,0 +1,23 @@
+{
+  "name": "gaozhong-2027-video",
+  "version": "1.0.0",
+  "description": "B站宣传视频：寻找虹夏的鼓点 —— 高中2027 QQ群",
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render Main out/video.mp4",
+    "render:preview": "remotion render Main out/preview.mp4 --codec=h264"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.3",
+    "@types/web": "0.0.140",
+    "esbuild": "0.23.0",
+    "typescript": "5.4.5"
+  }
+}
