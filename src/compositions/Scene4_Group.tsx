@@ -266,7 +266,7 @@ const Scene4_Group: React.FC = () => {
             fontStyle: "italic",
           }}
         >
-          "加入我们，一起学习，一起追番，一起变强 ✨"
+          "学习的乐趣，就该共享！"
         </span>
       </div>
 
