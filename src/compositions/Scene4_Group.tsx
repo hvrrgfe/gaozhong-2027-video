@@ -221,6 +221,7 @@ const Scene4_Group: React.FC = () => {
           <div style={{ display: "flex", gap: 10 }}>
             <MiniCard icon="🏆" title="谁是卷王" desc="限时刷题赛·20分钟5道压轴题" color={theme.bocchi.orange} />
             <MiniCard icon="🩺" title="错题ICU" desc="问卷星收集难题·投票选群题" color={theme.railgun.electric} />
+            <MiniCard icon="📚" title="云端自习室" desc="周六晚语音通话·闭麦一起学" color="#8BC34A" />
           </div>
         </div>
 
