@@ -141,6 +141,21 @@ const Scene6_Ending: React.FC = () => {
           >
             — 一个人的力量有限，但一群人的故事无限 —
           </span>
+          <br />
+          <span
+            style={{
+              fontFamily: "'PingFang SC', sans-serif",
+              fontSize: 16,
+              color: "#8899AA",
+              marginTop: 8,
+              display: "inline-block",
+              opacity: interpolate(frame, [300, 320], [0, 1], {
+                extrapolateLeft: "clamp", extrapolateRight: "clamp",
+              }),
+            }}
+          >
+            这个群会一直陪你们到 2029 高考结束，长期靠谱！
+          </span>
         </div>
 
         {/* 最终结尾 */}
