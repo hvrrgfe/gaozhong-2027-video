@@ -266,7 +266,7 @@ const Scene4_Group: React.FC = () => {
             fontStyle: "italic",
           }}
         >
-          "规则固定·活动定时·来了就不想走 🔥"
+          "加入我们，一起学习，一起追番，一起变强 ✨"
         </span>
       </div>
 
