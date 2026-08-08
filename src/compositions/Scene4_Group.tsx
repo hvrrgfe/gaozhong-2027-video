@@ -36,27 +36,47 @@ const Scene4_Group: React.FC = () => {
   const activitiesTitle = interpolate(frame, [500, 530], [0, 1], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
-  // 活动组展示（4组）
-  const act1 = interpolate(frame, [530, 560], [0, 1], {
+  // 活动组展示（4组，先淡入后淡出让位排行榜）
+  const act1 = interpolate(frame, [530, 560, 1010, 1030], [0, 1, 1, 0], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
-  const act2 = interpolate(frame, [650, 680], [0, 1], {
+  const act2 = interpolate(frame, [650, 680, 1010, 1030], [0, 1, 1, 0], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
-  const act3 = interpolate(frame, [770, 800], [0, 1], {
+  const act3 = interpolate(frame, [770, 800, 1010, 1030], [0, 1, 1, 0], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
-  const act4 = interpolate(frame, [890, 920], [0, 1], {
+  const act4 = interpolate(frame, [890, 920, 1010, 1030], [0, 1, 1, 0], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp",
+  });
+
+  // 排行榜
+  const lbTitle = interpolate(frame, [1050, 1080], [0, 1], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp",
+  });
+  const lb1 = interpolate(frame, [1100, 1130], [0, 1], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp",
+  });
+  const lb2 = interpolate(frame, [1140, 1170], [0, 1], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp",
+  });
+  const lb3 = interpolate(frame, [1180, 1210], [0, 1], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp",
+  });
+  const lb4 = interpolate(frame, [1220, 1250], [0, 1], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp",
+  });
+  const lb5 = interpolate(frame, [1260, 1290], [0, 1], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
 
   // 活动标语
-  const sloganOpacity = interpolate(frame, [1050, 1080], [0, 1], {
+  const sloganOpacity = interpolate(frame, [1350, 1380], [0, 1], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
 
   // 热血集结
-  const rallyOpacity = interpolate(frame, [1250, 1280], [0, 1], {
+  const rallyOpacity = interpolate(frame, [1500, 1530], [0, 1], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
 
@@ -235,6 +255,7 @@ const Scene4_Group: React.FC = () => {
           <div style={{ display: "flex", gap: 10 }}>
             <MiniCard icon="🌳" title="树洞吐槽" desc="公开聊天·月考考崩了怎么办" color={theme.tech.purple} />
             <MiniCard icon="📔" title="共享笔记库" desc="腾讯文档·认领章节·共创入库" color={theme.bocchi.yellow} />
+            <MiniCard icon="🚩" title="逆袭flag押金" desc="月初立flag押5分·达成还返+10" color="#FF6F00" />
           </div>
         </div>
 
@@ -247,7 +268,7 @@ const Scene4_Group: React.FC = () => {
           }}>🏆 积分榜奖励（每月前5名）</span>
           <div style={{ display: "flex", gap: 10 }}>
             <MiniCard icon="🏅" title="群头衔定制" desc="清北种子·卷王本王·自定义" color="#FFD700" />
-            <MiniCard icon="📊" title="积分明细" desc="腾讯文档实时核对·每月公示" color="#43A047" />
+            <MiniCard icon="📊" title="积分排行榜" desc="腾讯文档·每月公示·榜单透明" color="#43A047" />
           </div>
           <span style={{
             fontFamily: "'PingFang SC', sans-serif",
@@ -267,6 +288,55 @@ const Scene4_Group: React.FC = () => {
             <MiniCard icon="🐟" title="锦鲤祈福墙" desc="大考前许愿·考后还愿·达成+10分" color="#E91E63" />
             <MiniCard icon="🔥" title="7天连续内卷" desc="寒暑假打卡学习时长·完成+30分" color="#FF5722" />
           </div>
+        </div>
+      </div>
+
+      {/* 积分排行榜 */}
+      <div
+        style={{
+          position: "absolute",
+          top: "18%",
+          width: "100%",
+          textAlign: "center",
+          opacity: lbTitle,
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "'PingFang SC', sans-serif",
+            fontSize: 38,
+            fontWeight: 900,
+            color: "#FFD700",
+            textShadow: `0 0 40px #FFD70050`,
+            letterSpacing: 4,
+          }}
+        >
+          🏆 积分排行榜
+        </span>
+        <div style={{ marginTop: 6, fontSize: 18, color: "#8899AA" }}>
+          每月公示 · 榜单透明 · 卷起来！
+        </div>
+      </div>
+
+      {/* 榜单卡片 */}
+      <div
+        style={{
+          position: "absolute",
+          top: "32%",
+          left: "18%",
+          width: "64%",
+          display: "flex",
+          flexDirection: "column",
+          gap: 10,
+        }}
+      >
+        <RankRow rank={1} name="「卷王本王」" score="128" opacity={lb1} highlight color="#FFD700" />
+        <RankRow rank={2} name="「清北种子」" score="96" opacity={lb2} color="#C0C0C0" />
+        <RankRow rank={3} name="「错题杀手」" score="85" opacity={lb3} color="#CD7F32" />
+        <RankRow rank={4} name="「学习永动机」" score="72" opacity={lb4} color="#4169E1" />
+        <RankRow rank={5} name="「明日之星」" score="60" opacity={lb5} color="#9B59B6" />
+        <div style={{ textAlign: "center", marginTop: 6, opacity: sloganOpacity, fontSize: 16, color: "#B0C4DE" }}>
+          ↓ 下一个上榜的，就是你 ↓
         </div>
       </div>
 
@@ -405,6 +475,67 @@ const MiniCard: React.FC<{
           {desc}
         </span>
       </div>
+    </div>
+  );
+};
+
+const RankRow: React.FC<{
+  rank: number;
+  name: string;
+  score: string;
+  opacity: number;
+  color: string;
+  highlight?: boolean;
+}> = ({ rank, name, score, opacity, color, highlight }) => {
+  return (
+    <div
+      style={{
+        opacity,
+        transform: `translateX(${(1 - opacity) * 30}px)`,
+        display: "flex",
+        alignItems: "center",
+        gap: 16,
+        backgroundColor: highlight ? "rgba(255,215,0,0.1)" : "#1A1A3E",
+        borderRadius: 14,
+        padding: "10px 18px",
+        border: `2px solid ${highlight ? color : color}40`,
+        boxShadow: highlight ? `0 0 20px ${color}30` : "none",
+      }}
+    >
+      <span
+        style={{
+          fontFamily: "'PingFang SC', sans-serif",
+          fontSize: 22,
+          fontWeight: 900,
+          color: highlight ? color : "#FFFFFF",
+          width: 36,
+          textAlign: "center",
+        }}
+      >
+        {rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : `#${rank}`}
+      </span>
+      <span
+        style={{
+          fontFamily: "'PingFang SC', sans-serif",
+          fontSize: 20,
+          fontWeight: 700,
+          color: "#FFFFFF",
+          flex: 1,
+        }}
+      >
+        {name}
+      </span>
+      <span
+        style={{
+          fontFamily: "monospace",
+          fontSize: 24,
+          fontWeight: 900,
+          color: highlight ? color : "#FFD700",
+        }}
+      >
+        {score}
+      </span>
+      <span style={{ fontSize: 14, color: "#667788", marginLeft: 4 }}>分</span>
     </div>
   );
 };
