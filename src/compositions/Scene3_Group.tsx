@@ -20,14 +20,14 @@ const Scene3_Group: React.FC = () => {
 
       <div style={{ position: "absolute", top: "8%", width: "100%", textAlign: "center",
         opacity: interpolate(frame, [0, 10], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
-        <span style={{ fontFamily: "'Noto Sans SC', sans-serif", fontSize: 36, fontWeight: 900, color: "#FFFFFF", letterSpacing: 4 }}>
+        <span style={{ fontFamily: "Noto Sans SC", fontSize: 36, fontWeight: 900, color: "#FFFFFF", letterSpacing: 4 }}>
           于是，这个群诞生了——
         </span>
       </div>
 
       <div style={{ position: "absolute", top: "22%", width: "100%", textAlign: "center" }}>
         <span style={{
-          fontFamily: "'Noto Sans SC', sans-serif", fontSize: 60, fontWeight: 900,
+          fontFamily: "Noto Sans SC", fontSize: 60, fontWeight: 900,
           background: `linear-gradient(135deg, ${theme.bocchi.orange}, ${theme.bocchi.yellow}, ${theme.railgun.electric})`,
           WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", letterSpacing: 6,
         }}>高中2027</span>
@@ -47,7 +47,7 @@ const Scene3_Group: React.FC = () => {
               border: `1px solid ${f.color}40`, textAlign: "center",
             }}>
               <div style={{ fontSize: 24 }}>{f.icon}</div>
-              <div style={{ fontFamily: "'Noto Sans SC', sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", marginTop: 4 }}>{f.text}</div>
+              <div style={{ fontFamily: "Noto Sans SC", fontSize: 14, fontWeight: 700, color: "#FFFFFF", marginTop: 4 }}>{f.text}</div>
             </div>
           );
         })}
@@ -55,7 +55,7 @@ const Scene3_Group: React.FC = () => {
 
       <div style={{ position: "absolute", bottom: "15%", width: "100%", textAlign: "center",
         opacity: interpolate(frame, [100, 110], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
-        <span style={{ fontFamily: "'Noto Sans SC', sans-serif", fontSize: 28, fontWeight: 900, color: theme.bocchi.yellow,
+        <span style={{ fontFamily: "Noto Sans SC", fontSize: 28, fontWeight: 900, color: theme.bocchi.yellow,
           textShadow: `0 0 30px ${theme.bocchi.yellow}50` }}>
           学习的乐趣，就该共享！
         </span>
