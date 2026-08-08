@@ -1,33 +1,31 @@
 import { AbsoluteFill, Sequence } from "remotion";
 import { FPS } from "./theme";
-import { Scene1_Lonely } from "./compositions/Scene1_Lonely";
-import { Scene2_Anime } from "./compositions/Scene2_Anime";
-import { Scene3_AboutMe } from "./compositions/Scene3_AboutMe";
-import { Scene4_Group } from "./compositions/Scene4_Group";
-import { Scene5_Welcome } from "./compositions/Scene5_Welcome";
+import { Scene1_Intro } from "./compositions/Scene1_Intro";
+import { Scene2_AboutMe } from "./compositions/Scene2_AboutMe";
+import { Scene3_Group } from "./compositions/Scene3_Group";
+import { Scene4_Activities } from "./compositions/Scene4_Activities";
+import { Scene5_Rankings } from "./compositions/Scene5_Rankings";
 import { Scene6_Ending } from "./compositions/Scene6_Ending";
 
 export const Main: React.FC = () => {
-  const totalDuration = 360 * FPS; // 6分钟
-
   return (
-    <AbsoluteFill style={{ backgroundColor: "#0F1026" }}>
-      <Sequence from={0} durationInFrames={50 * FPS}>
-        <Scene1_Lonely />
+    <AbsoluteFill style={{ backgroundColor: "#2D1F14" }}>
+      <Sequence from={0 * FPS} durationInFrames={30 * FPS}>
+        <Scene1_Intro />
       </Sequence>
-      <Sequence from={50 * FPS} durationInFrames={60 * FPS}>
-        <Scene2_Anime />
+      <Sequence from={30 * FPS} durationInFrames={40 * FPS}>
+        <Scene2_AboutMe />
       </Sequence>
-      <Sequence from={110 * FPS} durationInFrames={60 * FPS}>
-        <Scene3_AboutMe />
+      <Sequence from={70 * FPS} durationInFrames={40 * FPS}>
+        <Scene3_Group />
       </Sequence>
-      <Sequence from={170 * FPS} durationInFrames={70 * FPS}>
-        <Scene4_Group />
+      <Sequence from={110 * FPS} durationInFrames={100 * FPS}>
+        <Scene4_Activities />
       </Sequence>
-      <Sequence from={240 * FPS} durationInFrames={60 * FPS}>
-        <Scene5_Welcome />
+      <Sequence from={210 * FPS} durationInFrames={40 * FPS}>
+        <Scene5_Rankings />
       </Sequence>
-      <Sequence from={300 * FPS} durationInFrames={60 * FPS}>
+      <Sequence from={250 * FPS} durationInFrames={110 * FPS}>
         <Scene6_Ending />
       </Sequence>
     </AbsoluteFill>
