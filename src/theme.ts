@@ -1,38 +1,33 @@
-// 主题配色 —— 暖色调（棕色/橘色/暖黄/奶油）
+// 主题配色 —— 米白暖色调
 export const theme = {
-  // 暖色主色调
   warm: {
-    brown: "#8D6E63",
-    darkBrown: "#4E342E",
+    brown: "#A1887F",
+    darkBrown: "#6D4C41",
     cream: "#FFF8E1",
     tan: "#D7CCC8",
   },
-  // 孤独摇滚/Bocchi 暖色系
   bocchi: {
-    orange: "#FF8A65",
-    yellow: "#FFD54F",
+    orange: "#FF7043",
+    yellow: "#FFB300",
     peach: "#FFCCBC",
-    coral: "#FFAB91",
+    coral: "#FF8A65",
   },
-  // 超炮/Railgun 电光蓝系（保留少量冷色点缀）
   railgun: {
     blue: "#5C6BC0",
     lightBlue: "#90CAF9",
     white: "#FFFFFF",
-    electric: "#4DD0E1",
+    electric: "#26C6DA",
   },
-  // 科技紫
   tech: {
     purple: "#AB47BC",
     deepPurple: "#7B1FA2",
   },
-  // 情绪色（暖底）
   mood: {
-    lonely: "#5D4037",  // 孤独-深棕
-    warm: "#FFE0B2",    // 治愈-暖黄
-    dark: "#1A0F0A",    // 开场-深暖棕
-    bg: "#2D1F14",      // 背景-暖棕
-    card: "#3E2723",    // 卡片-深咖啡
+    lonely: "#8D6E63",
+    warm: "#FFE0B2",
+    dark: "#E8E0D0",
+    bg: "#F5F0E1",
+    card: "#EDE7D6",
   },
 };
 
