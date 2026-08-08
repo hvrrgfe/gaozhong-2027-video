@@ -1,4 +1,4 @@
-import { AbsoluteFill, Img, useCurrentFrame, interpolate, spring } from "remotion";
+import { AbsoluteFill, Img, useCurrentFrame, interpolate, spring, staticFile } from "remotion";
 import { theme, FPS } from "../theme";
 import { useElectricGlow } from "../utils";
 
@@ -60,7 +60,7 @@ const Scene6_Ending: React.FC = () => {
           }}
         >
           <Img
-            src="/qrcode.jpg"
+            src={staticFile("qrcode.jpg")}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </div>
