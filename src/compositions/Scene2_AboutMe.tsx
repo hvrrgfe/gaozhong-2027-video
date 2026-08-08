@@ -2,7 +2,7 @@ import { AbsoluteFill, useCurrentFrame, interpolate } from "remotion";
 import { theme, FPS } from "../theme";
 import { useTypewriter } from "../utils";
 
-const Scene3_AboutMe: React.FC = () => {
+const Scene2_AboutMe: React.FC = () => {
   const frame = useCurrentFrame();
   const titleOpacity = interpolate(frame, [0, 20], [0, 1], {
     extrapolateLeft: "clamp",
@@ -169,4 +169,4 @@ const Card: React.FC<{
   );
 };
 
-export { Scene3_AboutMe };
+export { Scene2_AboutMe };
