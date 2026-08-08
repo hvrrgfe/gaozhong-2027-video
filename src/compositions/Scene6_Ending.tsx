@@ -39,14 +39,14 @@ const Scene6_Ending: React.FC = () => {
           <div style={{ marginTop: 6, fontFamily: "Noto Sans SC", fontSize: 16, color: "#B0C4DE" }}>
             一个人力量有限，一群人的故事无限
           </div>
-          <div style={{ marginTop: 4, fontFamily: "Noto Sans SC", fontSize: 14, color: "#8899AA" }}>
+          <div style={{ marginTop: 4, fontFamily: "Noto Sans SC", fontSize: 14, color: "#8D6E63" }}>
             直至2029高考结束 · 长期靠谱！
           </div>
         </div>
 
         {/* 署名 */}
         <div style={{ position: "absolute", bottom: "4%", width: "100%", textAlign: "center", opacity: interpolate(frame, [120, 140], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
-          <span style={{ fontFamily: "Noto Sans SC", fontSize: 16, color: "#FFFFFF" }}>
+          <span style={{ fontFamily: "Noto Sans SC", fontSize: 16, color: "#3E2723" }}>
             我是一个人呐qwedc · 期待在群里见到你
           </span>
           <span style={{ fontFamily: "Noto Sans SC", fontSize: 12, color: "#667788", display: "block", marginTop: 2 }}>
