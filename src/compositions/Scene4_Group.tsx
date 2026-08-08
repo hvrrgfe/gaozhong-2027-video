@@ -248,6 +248,11 @@ const Scene4_Group: React.FC = () => {
             <MiniCard icon="🏅" title="群头衔定制" desc="清北种子·卷王本王·自定义" color="#FFD700" />
             <MiniCard icon="📊" title="积分明细" desc="腾讯文档实时核对·每月公示" color="#43A047" />
           </div>
+          <span style={{
+            fontFamily: "'PingFang SC', sans-serif",
+            fontSize: 11, color: "#FFD700", opacity: 0.7,
+            marginTop: 2, textAlign: "center"
+          }}>🎁 实物奖励筹备中，敬请期待</span>
         </div>
 
         {/* 特别活动 */}
