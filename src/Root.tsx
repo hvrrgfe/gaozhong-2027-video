@@ -1,6 +1,9 @@
 import { Composition } from "remotion";
+import { loadFont } from "@remotion/google-fonts/NotoSansSC";
 import { Main } from "./Main";
 import { FPS } from "./theme";
+
+loadFont("normal", { weights: ["400", "700", "900"] });
 
 export const RemotionRoot: React.FC = () => {
   return (
