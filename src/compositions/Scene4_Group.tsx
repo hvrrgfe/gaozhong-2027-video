@@ -36,7 +36,7 @@ const Scene4_Group: React.FC = () => {
   const activitiesTitle = interpolate(frame, [500, 530], [0, 1], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
-  // 活动组展示（3组）
+  // 活动组展示（4组）
   const act1 = interpolate(frame, [530, 560], [0, 1], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
@@ -46,14 +46,17 @@ const Scene4_Group: React.FC = () => {
   const act3 = interpolate(frame, [770, 800], [0, 1], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
+  const act4 = interpolate(frame, [890, 920], [0, 1], {
+    extrapolateLeft: "clamp", extrapolateRight: "clamp",
+  });
 
   // 活动标语
-  const sloganOpacity = interpolate(frame, [950, 980], [0, 1], {
+  const sloganOpacity = interpolate(frame, [1050, 1080], [0, 1], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
 
   // 热血集结
-  const rallyOpacity = interpolate(frame, [1150, 1180], [0, 1], {
+  const rallyOpacity = interpolate(frame, [1250, 1280], [0, 1], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp",
   });
 
@@ -244,6 +247,19 @@ const Scene4_Group: React.FC = () => {
           <div style={{ display: "flex", gap: 10 }}>
             <MiniCard icon="🏅" title="群头衔定制" desc="清北种子·卷王本王·自定义" color="#FFD700" />
             <MiniCard icon="📊" title="积分明细" desc="腾讯文档实时核对·每月公示" color="#43A047" />
+          </div>
+        </div>
+
+        {/* 特别活动 */}
+        <div style={{ opacity: act4, display: "flex", flexDirection: "column", gap: 4 }}>
+          <span style={{
+            fontFamily: "'PingFang SC', sans-serif",
+            fontSize: 14, fontWeight: 700, color: "#E91E63",
+            letterSpacing: 2, marginLeft: 4
+          }}>📅 特别活动（大考/寒暑假）</span>
+          <div style={{ display: "flex", gap: 10 }}>
+            <MiniCard icon="🐟" title="锦鲤祈福墙" desc="大考前许愿·考后还愿·达成+10分" color="#E91E63" />
+            <MiniCard icon="🔥" title="7天连续内卷" desc="寒暑假打卡学习时长·完成+30分" color="#FF5722" />
           </div>
         </div>
       </div>
