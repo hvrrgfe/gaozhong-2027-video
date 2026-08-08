@@ -51,7 +51,7 @@ const Scene4_Activities: React.FC = () => {
               {sec.items.map((item, ii) => (
                 <span key={ii} style={{
                   fontFamily: "Noto Sans SC", fontSize: 24, fontWeight: 700,
-                  color: "#FFFFFF", backgroundColor: theme.mood.card,
+                  color: "#3E2723", backgroundColor: theme.mood.card,
                   padding: "8px 16px", borderRadius: 10, border: `1px solid ${sec.color}40`,
                 }}>{item}</span>
               ))}
