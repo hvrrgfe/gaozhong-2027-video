@@ -31,7 +31,7 @@ jobs:
 
       - name: Install Chromium for Remotion
         run: |
-          npx remotion puppeteer-install
+          npx remotion browser ensure
 
       - name: Render video
         run: |
