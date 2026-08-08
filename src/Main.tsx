@@ -10,7 +10,7 @@ import { Scene6_Ending } from "./compositions/Scene6_Ending";
 export const Main: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: theme.mood.bg }}>
-      <Audio src={staticFile("music_warm.mp3")} volume={0.8} />
+      <Audio src={staticFile("music_warm_acoustic.mp3")} volume={0.8} />
 
       <Sequence from={0 * FPS} durationInFrames={14 * FPS}>
         <Scene1_Intro />
