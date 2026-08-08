@@ -20,7 +20,7 @@ const Scene3_Group: React.FC = () => {
 
       <div style={{ position: "absolute", top: "8%", width: "100%", textAlign: "center",
         opacity: interpolate(frame, [0, 10], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
-        <span style={{ fontFamily: "Noto Sans SC", fontSize: 36, fontWeight: 900, color: "#FFFFFF", letterSpacing: 4 }}>
+        <span style={{ fontFamily: "Noto Sans SC", fontSize: 36, fontWeight: 900, color: "#3E2723", letterSpacing: 4 }}>
           于是，这个群诞生了——
         </span>
       </div>
@@ -47,7 +47,7 @@ const Scene3_Group: React.FC = () => {
               border: `1px solid ${f.color}40`, textAlign: "center",
             }}>
               <div style={{ fontSize: 24 }}>{f.icon}</div>
-              <div style={{ fontFamily: "Noto Sans SC", fontSize: 14, fontWeight: 700, color: "#FFFFFF", marginTop: 4 }}>{f.text}</div>
+              <div style={{ fontFamily: "Noto Sans SC", fontSize: 14, fontWeight: 700, color: "#3E2723", marginTop: 4 }}>{f.text}</div>
             </div>
           );
         })}
