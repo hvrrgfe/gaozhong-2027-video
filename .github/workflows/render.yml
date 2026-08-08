@@ -29,10 +29,6 @@ jobs:
           npm install --legacy-peer-deps --no-audit --no-fund
           npx remotion versions
 
-      - name: Install Chromium for Remotion
-        run: |
-          npx remotion browser ensure
-
       - name: Render video
         run: |
           mkdir -p out
